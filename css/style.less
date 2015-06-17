@@ -1,0 +1,193 @@
+@import "normalize";
+@import "header";
+@import "footer";
+@import "home";
+@import "nominees";
+@import "tshirt-creator";
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans-300.eot');
+  src: url('../fonts/MuseoSans-300.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans-300.woff2') format('woff2'),
+       url('../fonts/MuseoSans-300.woff') format('woff'),
+       url('../fonts/MuseoSans-300.ttf') format('truetype'),
+       url('../fonts/MuseoSans-300.svg#MuseoSans-300') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans-700.eot');
+  src: url('../fonts/MuseoSans-700.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans-700.woff2') format('woff2'),
+       url('../fonts/MuseoSans-700.woff') format('woff'),
+       url('../fonts/MuseoSans-700.ttf') format('truetype'),
+       url('../fonts/MuseoSans-700.svg#MuseoSans-700') format('svg');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans-900.eot');
+  src: url('../fonts/MuseoSans-900.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans-900.woff2') format('woff2'),
+       url('../fonts/MuseoSans-900.woff') format('woff'),
+       url('../fonts/MuseoSans-900.ttf') format('truetype'),
+       url('../fonts/MuseoSans-900.svg#MuseoSans-900') format('svg');
+  font-weight: 900;
+}
+
+
+@green : #2ecc71;
+@w : #fff;
+.green{
+  color: @green;
+}
+.white{
+  color: @w;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #ecf0f1;
+}
+
+body *{
+	font-family: 'MuseoSans', Helvetica, Arial, sans-serif;
+}
+
+section{
+  margin-top: 60px;
+}
+
+.regular{
+	font-weight: 300;
+}
+
+.bold{
+	font-weight: 700;
+}
+
+.extra-bold{
+	font-weight: 900;
+}
+
+.wrap{
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+a{
+	text-decoration: none;
+}
+
+button{
+  border: none;
+  background-color: transparent;
+}
+
+li{
+  list-style-type: none;
+}
+
+.center{
+	margin: 0 auto;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.btn{
+  display: block;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  opacity: 1;
+  margin-left:auto;
+  margin-right: auto;
+  max-width: 220px;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+.empty-button{
+	border: solid 3px @green;
+	padding: 10px 16px 8px;
+	color: @green;
+	.bold;
+}
+
+.filled-button{
+  background-color: @green;
+  .extra-bold;
+  font-size: 18px;
+  padding: 14px 40px;
+  color: #fff;
+}
+
+.icone-fb, 
+.icone-tw,
+.icone-insta{
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.icone-fb{
+  background-image: url("../images/icone_fb.png");
+}
+
+.icone-fb:hover, 
+.link-fb:hover .icone-fb{
+    background-image: url("../images/icone_fb-hover.png");
+}
+
+.icone-tw{
+  background-image: url("../images/icone_tw.png");
+
+}
+
+.icone-tw:hover,
+.link-tw:hover .icone-tw{
+  background-image: url("../images/icone_tw-hover.png");
+}
+
+.icone-insta{
+  background-image: url("../images/icone_insta.png");
+}
+
+.icone-insta:hover,
+.link-insta:hover .icone-insta{
+  background-image: url("../images/icone_insta-hover.png");
+}
+
+.loader{
+  width: 40px;
+  height: 40px;
+  margin: 50px auto;
+  background-size: 100% auto;
+  background-image: url("../images/loader.png");
+  animation: rotation 2s infinite linear;
+
+  @keyframes rotation {
+    0%   {transform: rotate(0deg);}
+    100%  {transform: rotate(360deg);}
+  }
+}

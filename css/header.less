@@ -1,0 +1,60 @@
+header{
+
+	.logo-tbody{
+		margin-top: 30px;
+		margin-bottom: 35px;
+		max-width: 100px;
+	}
+
+	nav{
+		.menu{
+			display: inline-block;
+  			vertical-align: middle;
+
+  			li{
+				display: inline-block;
+				list-style: none;
+				padding: 0 20px;
+				height: 0;
+				a{
+					color: #000;
+					font-size: 18px;
+					.regular;
+
+					&:not([class="empty-button"]):after{
+						content:"";
+						width: 0%;
+						margin-top: 7px;
+						display: block;
+						height: 3px;
+						background-color: @green;
+						-webkit-transition:all .3s ease-out;
+						transition:all .3s ease-out;
+					}
+
+					&:hover, &:focus, &.current{
+						&:after{
+							width: 100%;
+						}
+					}
+
+				}
+			}
+
+		}
+
+		.btn-menu{
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 20px;
+		}
+
+		.cta-menu{
+			padding: 12px 8px;
+			width: 220px;
+			text-align: center;
+		}
+
+	}
+
+}

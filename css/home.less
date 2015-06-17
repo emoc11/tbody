@@ -1,0 +1,201 @@
+/*
+
+ HOME 
+
+ */ 
+
+.current-collection{
+
+	.picture img{
+		max-width: 260px;
+	}
+	
+	.tshirt-carousel-wrapper{
+		text-align: center;
+		position: relative;
+
+		.tshirt-carousel{
+			max-width: 260px;
+			display: inline-block;
+		}
+
+		.carousel-navigation{
+			width: 15px;
+			height: 18px;
+			position: absolute;
+			top: calc(~"50% - 9px");
+			background-size: 100% 100%;
+			cursor: pointer;
+
+			&.prev{
+				background-image: url("../images/arrow_left.png")
+			}
+
+			&.next{
+				background-image: url("../images/arrow_right.png");
+				right: 0;
+			}
+		} 
+	}
+
+	.content{
+
+		text-align: center;
+		position: relative;
+	
+		// Titre
+		h2{
+			.green;
+			font-size: 24px;
+			.bold;
+			line-height: 1;
+		}
+
+		// Informations sur le t-shirt
+		
+		.infos-wrapper{
+			
+			&.tshirt-infos{
+				margin-top: 20px;
+			}
+
+			&.collection-infos{
+				margin-top: 15px;
+			}
+
+			// Nom d'un t-shirt
+			.name{
+				font-size: 16px;
+				.regular;
+			}
+				
+			// Prix du t-shirt
+			.old-price{
+				margin-top: 64px;
+				font-size: 24px;
+				.extra-bold;
+			}
+			
+			// Prix
+			.price{
+				font-size: 36px;
+				color: @green;
+				.extra-bold;
+
+				&.price-collection{
+					margin-top: 44px;
+				}
+			}
+
+			// Compte à rebours + CTA
+
+			.countdown{
+
+				&.countdown-selection{
+					margin-top: 58px;
+				}
+
+				&.countdown-collection{
+					margin-top: 60px;
+				}
+
+				.countdown__message{
+					.regular;
+					height: 44px;
+					font-size: 18px;
+					.countdown__time{
+						.green;
+						.extra-bold;
+					}
+				}
+
+				.countdown__btn{
+					.extra-bold;
+				    margin-top: 15px;
+					padding-left: 10px;
+					padding-right: 10px;
+					display: block;
+				}
+			}
+
+		}
+
+		
+
+		
+	}
+
+}
+
+.presentation{
+
+	background: #1e1e1e url("../images/header_presentation.png") no-repeat top;
+	background-size: 100% auto;
+
+	.presentation__header{
+		padding-top: 215px;
+		text-align: center;
+
+		h2{
+			.green;
+			.extra-bold;
+			font-size: 24px;
+		}
+
+	}
+
+	.presentation__content{
+		text-align: center;
+		max-width: 680px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 40px 0 60px;
+
+		.presentation__text{
+			color: #fff;
+			.regular;
+			line-height: 2.4;
+			font-size: 14px;
+		}
+
+		.presentation__cta{
+			max-width: 218px;
+			margin-top: 50px;
+			text-align: center;
+			padding-bottom: 8px;
+		}
+	}
+
+
+
+}
+
+.ranking{
+
+	padding-bottom: 100px;
+	display: inline-block;
+	width: 100%;
+
+	.tshirt{
+
+		.tshirt--votes{
+			margin-top: 15px;
+			color: #000;
+			text-align: center;
+
+			span{
+				font-size: 24px;
+			}
+		}
+	}
+
+	.ranking-cta--wrapper{
+		margin-top: 115px !important;
+		a{
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+		}
+	}
+
+}

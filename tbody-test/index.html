@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>TBody</title>
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+        <div class="wrapper-motif">
+
+            <canvas height="500" width="500" id="canvas"></canvas>
+            
+            <svg>
+              <defs>
+                <clipPath id="diamond" clipPathUnits="objectBoundingBox">
+                  <polygon points=".5,0 1,.5 .5,1 0,.5" />
+                </clipPath>
+                <clipPath id="pentagon" clipPathUnits="objectBoundingBox">
+                  <polygon points=".5,0 1,.38 .8,1 .2,1 0,.38" />
+                </clipPath>
+                <clipPath id="hexagon" clipPathUnits="objectBoundingBox">
+                  <polygon points=".5,0 .95,.25 .95,.75 .5,1 .05,.75 .05,.25" />
+                </clipPath>
+                <clipPath id="octogon" clipPathUnits="objectBoundingBox">
+                  <polygon points="0,.5 .15,.15 .5,0 .85,.15 1,.5 .85,.85 .5,1 .15,.85" />
+                </clipPath>
+                <clipPath id="t-shirt" clipPathUnits="objectBoundingBox">
+                  <polygon points="123.1999969482 561.5999755859, 198.6999969482 576.0999755859, 444.5999908447 574.2999756336, 468.3999900818 562.9999754429, 461.5999898911 464.9999754429, 458.7999899387 418.2999746799, 456.5999898911 375.0999739170, 456.5999898911 322.2999746799, 460.1999897957 300.3999750614, 463.8999898434 279.5999758244, 466.8999898434 266.1999762058, 469.3999898434 257.8999760151, 473.1999897957 258.2999760211, 488.4999899864 284.4999767840, 492.9999899864 292.4999767840, 506.3999896049 295.2999767363, 592.2999911308 253.9999774992, 590.4999911785 244.1999773085, 566.8999907970 195.4999765456, 548.2999904156 166.2999757826, 533.6999900341 131.7999757826, 519.0000000000 100.5999984741, 481.7999992371 66.6999969482, 373.2999992371 25.0999984741, 354.0999984741 22.3999984264, 240.5999984741 24.2999985218, 216.3999977112 28.9999983311, 110.0000000000 73.9000015259, 76.0999984741 109.7000007629, 26.0999984741 204.2999992371, 13.8999986649 232.0999984741, 11.7999987602 252.1999988556, 94.7999987602 296.3999996185, 114.3999991417 280.5999994278, 121.5999989510 264.7999992371, 124.0999989510 257.8999991417, 126.0999989510 262.8999991417, 135.6999993324 323.8000006676, 130.4999995232 482.8000006676, 123.1999969482 561.5999755859" />
+                </clipPath>
+                
+              </defs>
+            </svg>
+
+        </div>
+
+
+        <div>
+            
+            <form class="selection-option" action="#">
+                
+                <select class="selection-option--masque">
+
+                        <option value="" disabled>Choisir la forme</option>
+                        <option value="diamond">Diamond</option>
+                        <option value="pentagon">Pentagon</option>
+                        <option value="hexagon">Hexagon</option>
+                        <option value="octogon">Octogon</option>
+
+                </select>
+
+                <br/><br/>
+                
+                <label for="stop-animation">Cliquer ici pour arrêter l'animation (ou appuyer sur la touche espace) :</label>
+                <input type="checkbox" id="stop-animation" class="selection-option--stoper-animation">
+
+            </form>
+
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/vendor/datgui.js"></script> <!-- download from https://github.com/dataarts/dat.gui -->
+        <script src="js/main.js"></script>
+        <script src="js/choix_masque.js"></script>
+
+    </body>
+</html>

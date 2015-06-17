@@ -1,0 +1,101 @@
+footer{
+	
+	background-color: #1e1e1e;
+	padding: 65px 0;
+	display: inline-block;
+  	width: 100%;
+  	position: relative;
+
+	.footer-logo{
+
+		margin: 0 auto;
+		background-image: url("../images/footer_logo.png");
+		background-size: 100% auto;
+		width: 106px;
+		height: 120px;
+	}
+
+	.social-links{
+		padding-top: 39px;
+		margin: 0 auto;
+		width: auto;
+		text-align: center;
+
+		.link{
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+			background-size: auto 50%;
+			height: 80px;
+			width: 52px;
+
+			&:nth-child(2){
+				margin: 0 68px;
+			}
+
+			.link--icone{
+
+				height: 40px;
+				background-size: 100% auto;
+				margin: 0 auto;
+
+				&.icone-fb{
+					width: 24px;
+				}
+
+				&.icone-tw{
+					width: 45px;
+				}
+
+				&.icone-insta{
+					width: 36px;
+				}
+
+			}
+
+			.link--label{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				.regular;
+				color: #fff;
+				font-size: 12px;
+				text-align: center;
+ 				width: 100%;
+			}
+
+			&:hover{
+				&:after{
+					content:"";
+					display: block;
+					transition: all .2s ease;
+					background-size: 100% auto;
+					width: 22px;
+					height: 14px;
+					position: absolute;
+					top : 92px;
+					left: calc(~"50% - 11px");
+					background-image: url("../images/icone_triangle.png");
+				}
+			}
+
+		}
+	}
+
+	.footer-menu{
+		color:#fff;
+		.bold;
+		text-align: right;
+		line-height: 1.7;
+		padding: 12px 22px 12px 0;
+		border-right: solid 4px @green;
+		
+		a{
+			color:#fff;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+
+}
