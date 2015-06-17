@@ -6,7 +6,7 @@
 			<div class="footer-logo"></div>
 		</div>
 
-		<div class="tshirt-carousel-wrapper col6">
+		<div class="col6">
 			<div class="social-links">
 				<a class="link link--fb" href="#">
 					<div class="link--icone icone-fb"></div>
