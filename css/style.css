@@ -707,21 +707,21 @@ li {
   background-image: url("../images/icone_fb.png");
 }
 .icone-fb:hover,
-.link-fb:hover .icone-fb {
+.link--fb:hover .icone-fb {
   background-image: url("../images/icone_fb-hover.png");
 }
 .icone-tw {
   background-image: url("../images/icone_tw.png");
 }
 .icone-tw:hover,
-.link-tw:hover .icone-tw {
+.link--tw:hover .icone-tw {
   background-image: url("../images/icone_tw-hover.png");
 }
 .icone-insta {
   background-image: url("../images/icone_insta.png");
 }
 .icone-insta:hover,
-.link-insta:hover .icone-insta {
+.link--insta:hover .icone-insta {
   background-image: url("../images/icone_insta-hover.png");
 }
 .loader {
