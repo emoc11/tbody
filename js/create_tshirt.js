@@ -1,13 +1,19 @@
 $(function(){
 
+    /************************************************************************************************
+
+                                    CREATION DU CANVAS
+
+    ************************************************************************************************/
+
     // Graphics settings
     var settings ={};
     settings.displayWidth = 200;
-    settings.displayHeight = 240;
-    settings.backgroundAlpha = 0.02;
+    settings.displayHeight = 300;
+    settings.backgroundAlpha = 0.01;
     settings.agentSize = 2;
     settings.maxIncrement = 1;
-    settings.nbAgents = 500;
+    settings.nbAgents = 30;
     settings.triangleAlpha = .1;
     settings.distanceActiveMouse = .01;
     settings.mouseActivated = false;
@@ -148,14 +154,14 @@ $(function(){
     var gui = new dat.GUI();
     gui.add(settings, "backgroundAlpha", 0, 1); // Register the property 'refreshAlpha' of the 'settings' object, taking values between 0 and 1. The initial value is the value given to the property at the beginning of this code
     // gui.add(settings, "triangleAlpha", 0, 1);
-    gui.add(settings, "distanceActiveMouse", 0, 1);
+    // gui.add(settings, "distanceActiveMouse", 0, 1);
     gui.add(settings, "agentSize", 1, 100);
-    gui.add(settings, "mouseActivated", false, true);
+    var numAgentController = gui.add(settings, "nbAgents", 1, 500);
+    // gui.add(settings, "mouseActivated", false, true);
     // var stopAnimation = gui.add(settings, "stopAnimation", false, true);
     var colorR = gui.add(settings, "colorR", 0, 256);
     var colorV = gui.add(settings, "colorV", 0, 256);
     var colorB = gui.add(settings, "colorB", 0, 256);
-    var numAgentController = gui.add(settings, "nbAgents", 1, 15000);
 
 
     colorR.onChange(function(value){
@@ -188,25 +194,6 @@ $(function(){
         }
     });
 
-    // Stoper ou non l'animation 
-
-    var $stopAnim = $("#stop-animation");
-
-    $stopAnim.on('change', function(){
-        settings.stopAnimation =  $(this).is(':checked')
-    })
-
-    $("body").keydown(function(event) {
- 
-        if (event.which === 32) { 
-
-            settings.stopAnimation = !settings.stopAnimation;
-
-            $stopAnim.prop('checked', settings.stopAnimation);
-
-        }
-    });
-
     // track mouse position
     var cvs = $("body");
     cvs.mousemove(function(e) {
@@ -214,5 +201,175 @@ $(function(){
         mousePosition.x = e.clientX - offset.left;
         mousePosition.y = e.clientY - offset.top;
     });
-    
+
+
+    /************************************************************************************************
+
+                                    ENREGISTREMENT DU CANVAS
+
+    ************************************************************************************************/
+
+
+    // Stoper ou non l'animation dans le canvas
+
+    var $stopAnim  = $("#design-pause"),
+        $playAnim  = $("#design-play");
+
+
+    function changeAnimation() {
+
+        settings.stopAnimation = !settings.stopAnimation;
+
+        $stopAnim.toggleClass('btn-save--active btn-save--inactive');
+        $playAnim.toggleClass('btn-save--active btn-save--inactive');
+
+    }
+
+    $stopAnim.on('click', function() { 
+        if (!settings.stopAnimation){
+            changeAnimation(); 
+            createProposition();
+        }
+    });
+
+    $playAnim.on('click', function(e) { 
+        if (settings.stopAnimation)
+            changeAnimation(); 
+    });
+
+
+    $("body").keydown(function(event) {
+ 
+        if (event.which === 32) { 
+
+            $stopAnim.trigger('click');
+
+        }
+    });
+
+
+    // Créer/supprimer/sauver(sélectionner) la proposition;
+
+    var propositions, nb_prop;
+
+    function init(){
+
+/*        propositions = localStorage.getItem("propositions") || {};
+
+        console.log(propositions);
+
+        if($.isEmptyObject(propositions)){
+            propositions.prop = [];
+            nb_prop = 0;
+        }else{
+            $(".propositions-none-wrapper").remove();
+            nb_prop = propositions.prop.length;
+        }*/
+
+    }
+
+    // Ajout d'une proposition 
+
+    function createProposition() {
+
+        var width         = settings.displayWidth,
+            height        = settings.displayHeight,
+            type          = "jpeg",
+            $propositions = $(".propositions .onerow");
+
+        // Création du canvas
+        var $image = Canvas2Image.convertToImage(canvas, width, height, type),
+            prop_src = $($image).attr("src");
+
+/*        // Informations sur la proposition (id + src de l'image liée) 
+        var proposition = {
+            "prop_id"  : nb_prop,
+            "prop_src" : $($image).attr("src")
+        };*/
+
+        // propositions.prop.push(proposition);
+
+        // On stocke les données dans le local storage
+        // localStorage.setItem("propositions", propositions);
+
+        // On ajoute la proposition dans la liste 
+        var $proposition = $('<div class="proposition col2"><a class="proposition__visu"><div class="proposition__overlay"></div></a><a class="delete">Supprimer</a>');
+
+        $proposition.find('.proposition__visu').append($image);
+
+        if( $(".propositions-none-wrapper").length > 0)
+            $(".propositions-none-wrapper").css("display","none");
+
+        $propositions.append($proposition);
+        $(".propositions .proposition").last().animate({"opacity": 1});
+
+    }
+
+    // Suppression d'une création
+
+    function deleteProposition(e){
+
+        var $proposition = $(e.currentTarget).parent(".proposition");
+
+        $.when( $proposition.animate({"opacity": 0}) ).then(function(){
+
+            $proposition.remove();
+
+            var nb_prop = $('.proposition').length;
+
+            // Réaffichage de l'encadré pointillé "vos créations" si aucune création dans la liste
+            if(nb_prop == 0)
+                $(".propositions-none-wrapper").css("display","block");
+        });
+
+    }
+
+   /* $('body').on('mouseover', '.proposition__visu', function(e){
+        
+        var visuOver = $(e.target);
+
+        $(".proposition__visu").each(function(){
+            if($(this)!=visuOver)
+                $(this).find("img").stop().animate({"opacity":"0.4"}, 200, "linear");
+        });
+
+    });
+
+    $('body').on('mouseout', '.proposition', function(e){
+        
+        var $propositions = $(".proposition");
+
+        $propositions.each(function(){
+            $(this).find("img").stop().animate({"opacity":"1"}, 200, "linear");
+        });
+
+    });*/
+
+    $('body').on('click', '.delete', function(e){
+        deleteProposition(e);
+    });
+
+    // Soumission d'une création
+
+    $('body').on('click', '.proposition__visu', function(e){
+        
+        var $proposition = $(e.currentTarget).parent(".proposition"),
+            src = $proposition.find("img").attr("src"),
+            $inputPictureHidden = $("#tshirt-visu-data");
+            $formImg = $(".pop-up__form .tshirt__visu").attr("src", src);
+
+        $inputPictureHidden.val(src);
+
+        $(".pop-up").fadeIn();
+
+    });
+
+    $('.pop_up__close').on('click', function(){
+        $(".pop-up").fadeOut();
+    });
+
+
+    // Lancement de la page   
+    init();
+
 });

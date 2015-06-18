@@ -583,17 +583,17 @@ footer .footer-menu a:hover {
   font-weight: 900;
   font-size: 16px;
 }
-.collection-infos {
+.category-infos {
   width: 682px;
   margin: 0 auto;
   text-align: center;
 }
-.collection-infos .collection-infos__name {
+.category-infos .category-infos__name {
   color: #2ecc71;
   font-size: 24px;
   font-weight: 300;
 }
-.collection-infos .collection-infos__description {
+.category-infos .category-infos__description {
   margin-top: 40px;
   margin-bottom: 55px;
   font-weight: 300;
@@ -615,39 +615,50 @@ footer .footer-menu a:hover {
 }
 .tshirt-design .tshirt-design__render .tshirt__canvas {
   position: absolute;
-  top: 100px;
+  top: 95px;
   left: 118px;
 }
+.tshirt-design .tshirt-design__rules {
+  margin-top: 100px !important;
+}
 .tshirt-design .tshirt-design__rules .rules__save {
-  margin-top: 150px;
+  margin-top: 270px;
+  text-align: center;
 }
 .tshirt-design .tshirt-design__rules .rules__save .btn-save {
   width: 220px;
   font-weight: 900;
   font-size: 18px;
   opacity: 1;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-.tshirt-design .tshirt-design__rules .rules__save .btn-save:hover {
-  opacity: 0.7;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
 }
 .tshirt-design .tshirt-design__rules .rules__save .btn-save--active {
   color: #ffffff;
   background-color: #2ecc71;
   padding: 10px;
+  cursor: pointer;
+}
+.tshirt-design .tshirt-design__rules .rules__save .btn-save--active:hover {
+  opacity: 0.7;
 }
 .tshirt-design .tshirt-design__rules .rules__save .btn-save--inactive {
   color: #2ecc71;
   border: solid 2px #2ecc71;
   padding: 8px;
+  cursor: not-allowed;
 }
-.creations {
-  padding: 115px 0 0;
+.propositions {
+  padding: 60px 0;
   background: #1e1e1e url("../images/header_presentation.png") no-repeat top;
   background-size: 100%;
+  display: inline-block;
+  width: 100%;
 }
-.creations .propositions-wrapper .propositions {
+.propositions .propositions-none-wrapper {
+  height: 332px;
+}
+.propositions .propositions-none-wrapper .propositions-none {
   color: #2ecc71;
   border: dashed 2px #2ecc71;
   height: 100%;
@@ -657,23 +668,27 @@ footer .footer-menu a:hover {
   height: 275px;
   line-height: 275px;
 }
-.creations .creation .creation__visu {
+.propositions .proposition {
+  opacity: 0;
+}
+.propositions .proposition .proposition__visu {
   position: relative;
   cursor: pointer;
   display: block;
   width: 100%;
 }
-.creations .creation .creation__visu img {
+.propositions .proposition .proposition__visu img {
   position: relative;
   z-index: 1;
   height: auto;
+  opacity: 1;
 }
-.creations .creation .creation__visu .creation__overlay {
+.propositions .proposition .proposition__visu .proposition__overlay {
   position: absolute;
   z-index: 2;
   top: 0;
   left: 0;
-  background-color: rgba(119, 196, 149, 0.5);
+  background-color: rgba(119, 196, 149, 0.7);
   background-image: url("../images/check.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -681,14 +696,14 @@ footer .footer-menu a:hover {
   width: 100%;
   height: 100%;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
+  -webkit-transition: opacity .3s linear;
+  transition: opacity .3s linear;
 }
-.creations .creation .creation__visu:hover .creation__overlay {
+.propositions .proposition .proposition__visu:hover .proposition__overlay {
   opacity: 1;
 }
-.creations .creation .delete {
-  margin-top: 15px;
+.propositions .proposition .delete {
+  margin: 15px 0;
   display: block;
   border: solid 2px #ffffff;
   padding: 8px 0;
@@ -698,10 +713,11 @@ footer .footer-menu a:hover {
   position: relative;
   text-align: center;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
+  -webkit-transition: opacity .3s linear;
+  transition: opacity .3s linear;
+  cursor: pointer;
 }
-.creations .creation .delete:before {
+.propositions .proposition .delete:before {
   content: "";
   position: absolute;
   top: 9px;
@@ -712,8 +728,67 @@ footer .footer-menu a:hover {
   background: url('../images/croix.png') no-repeat;
   background-size: cover;
 }
-.creations .creation:hover .delete {
+.propositions .proposition:hover .delete {
   opacity: 1;
+}
+.pop-up {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  display: none;
+}
+.pop-up .pop-up__form {
+  z-index: 9;
+  width: 680px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 50px auto 0;
+  text-align: center;
+  position: relative;
+}
+.pop-up .pop-up__form .pop_up__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url('../images/close.png') no-repeat;
+  cursor: pointer;
+}
+.pop-up .pop-up__form .tshirt__visu {
+  display: block;
+  margin: 0 auto;
+}
+.pop-up .pop-up__form .tshirt__name {
+  display: block;
+  width: 300px;
+  text-align: center;
+  margin: 20px auto 0;
+  padding: 10px 4px;
+}
+.pop-up .pop-up__form .tshirt__submit {
+  margin-top: 20px;
+  border: none;
+}
+.pop-up .pop-up__overlay {
+  position: fixed;
+  z-index: 8;
+}
+.dg.ac {
+  position: absolute !important;
+  right: 17% !important;
+  top: 650px !important;
+}
+.dg.ac .dg ul {
+  height: auto !important;
+}
+.dg.ac .close-button {
+  display: none !important;
 }
 @font-face {
   font-family: 'MuseoSans';
