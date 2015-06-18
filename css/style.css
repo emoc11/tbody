@@ -579,22 +579,63 @@ footer .footer-menu a:hover {
   font-weight: 900;
   font-size: 16px;
 }
-.collection__infos {
+.collection-infos {
   width: 682px;
   margin: 0 auto;
   text-align: center;
 }
-.collection__infos .collection__name {
+.collection-infos .collection-infos__name {
   color: #2ecc71;
   font-size: 24px;
   font-weight: 300;
 }
-.collection__infos .collection__description {
+.collection-infos .collection-infos__description {
   margin-top: 40px;
   margin-bottom: 55px;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.8;
+}
+.tshirt-design .tshirt-design__render {
+  max-width: 440px;
+  margin: 0 auto;
+  position: relative;
+}
+.tshirt-design .tshirt-design__render .tshirt__bg {
+  width: 100%;
+  height: auto;
+}
+.tshirt-design .tshirt-design__render .tshirt__canvas {
+  position: absolute;
+  top: 100px;
+  left: 118px;
+}
+.tshirt-design .tshirt-design__rules .rules__save {
+  margin-top: 150px;
+}
+.tshirt-design .tshirt-design__rules .rules__save .btn-save {
+  width: 220px;
+  font-weight: 900;
+  font-size: 18px;
+  opacity: 1;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.tshirt-design .tshirt-design__rules .rules__save .btn-save:hover {
+  opacity: 0.7;
+}
+.tshirt-design .tshirt-design__rules .rules__save .btn-save--active {
+  color: #ffffff;
+  background-color: #2ecc71;
+  padding: 10px;
+}
+.tshirt-design .tshirt-design__rules .rules__save .btn-save--inactive {
+  color: #2ecc71;
+  border: solid 2px #2ecc71;
+  padding: 8px;
+}
+.creations .creation {
+  position: relative;
 }
 @font-face {
   font-family: 'MuseoSans';
