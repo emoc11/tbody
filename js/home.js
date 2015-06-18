@@ -7,7 +7,8 @@
 		$nextBtn = $(".tshirt-carousel-wrapper .next");
 
 		$carousel.owlCarousel({
-			items : 1
+			items : 1,
+			autoplay: true
 		});
 
 		$prevBtn.on('click', function(){
