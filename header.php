@@ -14,7 +14,7 @@
 	<div class="wrap">
 
 		<div class="logo-tbody center">
-			<a href="#"><img src="./img/logo_tbody.png" alt="logo T-body" title="Retour à l'accueil"></a>
+			<a href="#"><img src="./images/logo_tbody.png" alt="logo T-body" title="Retour à l'accueil"></a>
 		</div>
 
 		<nav>
