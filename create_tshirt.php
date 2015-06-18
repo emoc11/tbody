@@ -70,30 +70,6 @@
 			<a href="#" class="delete">Supprimer</a>
 		</div>
 
-		<div class="creation col2">
-			<a href="#" class="creation__visu">
-				<img src="images/t_shirt_1.png" alt="">
-				<div class="creation__overlay"></div>
-			</a>
-			<a href="#" class="delete">Supprimer</a>
-		</div>
-
-		<div class="creation col2">
-			<a href="#" class="creation__visu">
-				<img src="images/t_shirt_1.png" alt="">
-				<div class="creation__overlay"></div>
-			</a>
-			<a href="#" class="delete">Supprimer</a>
-		</div>
-
-		<div class="creation col2">
-			<a href="#" class="creation__visu">
-				<img src="images/t_shirt_1.png" alt="">
-				<div class="creation__overlay"></div>
-			</a>
-			<a href="#" class="delete">Supprimer</a>
-		</div>
-
 	</div>
 	
 </section>
