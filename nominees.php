@@ -57,6 +57,7 @@
 					<div class="nominee__action"></div>
 				</div>
 				<div class="nominee__creator">
+					<div class="nominee__name">Test t-shirt 2</div>
 					Créé par <span class="nominee__creator--name">TEST1</span>
 				</div>
 			</div>
@@ -75,6 +76,7 @@
 					<div class="nominee__action"></div>
 				</div>
 				<div class="nominee__creator">
+					<div class="nominee__name">Test t-shirt 2</div>
 					Créé par <span class="nominee__creator--name">TEST2</span>
 				</div>
 			</div>
@@ -93,6 +95,7 @@
 					<div class="nominee__action"></div>
 				</div>
 				<div class="nominee__creator">
+					<div class="nominee__name">Test t-shirt 2</div>
 					Créé par <span class="nominee__creator--name">TEST3</span>
 				</div>
 			</div>
@@ -111,6 +114,7 @@
 					<div class="nominee__action"></div>
 				</div>
 				<div class="nominee__creator">
+					<div class="nominee__name">Test t-shirt 2</div>
 					Créé par <span class="nominee__creator--name">TEST4</span>
 				</div>
 			</div>
@@ -134,6 +138,7 @@
 					<div class="nominee__action"></div>
 				</div>
 				<div class="nominee__creator">
+					<div class="nominee__name">Test t-shirt 2</div>
 					Créé par <span class="nominee__creator--name">Améziane</span>
 				</div>
 			</div>
@@ -152,6 +157,7 @@
 					<div class="nominee__action"></div>
 				</div>
 				<div class="nominee__creator">
+					<div class="nominee__name">Test t-shirt 2</div>
 					Créé par <span class="nominee__creator--name">Améziane</span>
 				</div>
 			</div>
@@ -170,6 +176,7 @@
 					<div class="nominee__action"></div>
 				</div>
 				<div class="nominee__creator">
+					<div class="nominee__name">Test t-shirt 2</div>
 					Créé par <span class="nominee__creator--name">Améziane</span>
 				</div>
 			</div>
@@ -188,6 +195,7 @@
 					<div class="nominee__action"></div>
 				</div>
 				<div class="nominee__creator">
+					<div class="nominee__name">Test t-shirt 2</div>
 					Créé par <span class="nominee__creator--name">Améziane</span>
 				</div>
 			</div>

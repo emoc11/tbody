@@ -16,6 +16,7 @@ header{
 				list-style: none;
 				padding: 0 20px;
 				height: 0;
+
 				a{
 					color: #000;
 					font-size: 18px;
@@ -38,6 +39,17 @@ header{
 						}
 					}
 
+				}
+
+				&.current_page_item {
+					a:after {
+						content:"";
+						width: 100%;
+						margin-top: 7px;
+						display: block;
+						height: 3px;
+						background-color: @green;
+					}
 				}
 			}
 
