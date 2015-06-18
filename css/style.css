@@ -215,6 +215,14 @@ header nav .menu li a:focus:after,
 header nav .menu li a.current:after {
   width: 100%;
 }
+header nav .menu li.current_page_item a:after {
+  content: "";
+  width: 100%;
+  margin-top: 7px;
+  display: block;
+  height: 3px;
+  background-color: #2ecc71;
+}
 header nav .btn-menu {
   display: inline-block;
   vertical-align: middle;
@@ -497,6 +505,15 @@ footer .footer-menu a:hover {
 }
 .nominees .nominees__list .nominee {
   max-width: 260px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.nominees .nominees__list .nominee .nominee__name {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: 700;
+  color: #2ecc71;
 }
 .nominees .nominees__list .nominee .nominee__main-infos {
   position: relative;
@@ -580,7 +597,7 @@ footer .footer-menu a:hover {
 }
 .nominees .nominees__list .nominee .nominee__creator .nominee__creator--name {
   color: #2ecc71;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 16px;
 }
 .category-infos {
