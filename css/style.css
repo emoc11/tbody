@@ -497,6 +497,15 @@ footer .footer-menu a:hover {
 }
 .nominees .nominees__list .nominee {
   max-width: 260px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.nominees .nominees__list .nominee .nominee__name {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: 700;
+  color: #2ecc71;
 }
 .nominees .nominees__list .nominee .nominee__main-infos {
   position: relative;
@@ -580,7 +589,7 @@ footer .footer-menu a:hover {
 }
 .nominees .nominees__list .nominee .nominee__creator .nominee__creator--name {
   color: #2ecc71;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 16px;
 }
 .collection-infos {
