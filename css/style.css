@@ -202,26 +202,32 @@ header nav .menu li a {
 }
 header nav .menu li a:not([class="empty-button"]):after {
   content: "";
-  width: 0%;
-  margin-top: 7px;
+  opacity: 0;
   display: block;
-  height: 3px;
-  background-color: #2ecc71;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  z-index: 1;
+  width: 100%;
+  height: 30px;
+  margin-top: -27px;
+  background: url("../images/icone_triangle.png") no-repeat center;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 header nav .menu li a:hover:after,
 header nav .menu li a:focus:after,
 header nav .menu li a.current:after {
-  width: 100%;
+  opacity: .5;
 }
 header nav .menu li.current_page_item a:after {
   content: "";
-  width: 100%;
-  margin-top: 7px;
+  opacity: 1;
   display: block;
-  height: 3px;
-  background-color: #2ecc71;
+  z-index: 1;
+  width: 100%;
+  height: 30px;
+  margin-top: -27px;
+  background: url("../images/icone_triangle.png") no-repeat center;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 header nav .btn-menu {
   display: inline-block;
@@ -261,6 +267,23 @@ footer .social-links .link {
   height: 80px;
   width: 52px;
 }
+footer .social-links .link:after {
+  content: "";
+  display: block;
+  opacity: 0;
+  transition: all .2s ease;
+  background-size: 100% auto;
+  width: 22px;
+  height: 14px;
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 11px);
+  background-image: url("../images/icone_triangle.png");
+}
+footer .social-links .link:hover:after {
+  opacity: 1;
+  top: 92px;
+}
 footer .social-links .link:nth-child(2) {
   margin: 0 68px;
 }
@@ -287,18 +310,6 @@ footer .social-links .link .link--label {
   font-size: 12px;
   text-align: center;
   width: 100%;
-}
-footer .social-links .link:hover:after {
-  content: "";
-  display: block;
-  transition: all .2s ease;
-  background-size: 100% auto;
-  width: 22px;
-  height: 14px;
-  position: absolute;
-  top: 92px;
-  left: calc(50% - 11px);
-  background-image: url("../images/icone_triangle.png");
 }
 footer .footer-menu {
   color: #fff;
