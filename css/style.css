@@ -596,6 +596,10 @@ footer .footer-menu a:hover {
   font-size: 14px;
   line-height: 1.8;
 }
+.tshirt-design {
+  display: inline-block;
+  width: 100%;
+}
 .tshirt-design .tshirt-design__render {
   max-width: 440px;
   margin: 0 auto;
@@ -634,8 +638,78 @@ footer .footer-menu a:hover {
   border: solid 2px #2ecc71;
   padding: 8px;
 }
-.creations .creation {
+.creations {
+  padding: 115px 0 0;
+  background: #1e1e1e url("../images/header_presentation.png") no-repeat top;
+  background-size: 100%;
+}
+.creations .propositions-wrapper .propositions {
+  color: #2ecc71;
+  border: dashed 2px #2ecc71;
+  height: 100%;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  height: 275px;
+  line-height: 275px;
+}
+.creations .creation .creation__visu {
   position: relative;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+.creations .creation .creation__visu img {
+  position: relative;
+  z-index: 1;
+  height: auto;
+}
+.creations .creation .creation__visu .creation__overlay {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgba(119, 196, 149, 0.5);
+  background-image: url("../images/check.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.creations .creation .creation__visu:hover .creation__overlay {
+  opacity: 1;
+}
+.creations .creation .delete {
+  margin-top: 15px;
+  display: block;
+  border: solid 2px #ffffff;
+  padding: 8px 0;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  position: relative;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.creations .creation .delete:before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  width: 22px;
+  height: 20px;
+  display: block;
+  background: url('../images/croix.png') no-repeat;
+  background-size: cover;
+}
+.creations .creation:hover .delete {
+  opacity: 1;
 }
 @font-face {
   font-family: 'MuseoSans';
