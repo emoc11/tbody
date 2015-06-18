@@ -1,3 +1,8 @@
+/*
+
+ HOME 
+
+ */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -126,7 +131,7 @@ button[disabled],
 html input[disabled] {
   cursor: default;
 }
-button input::-moz-focus-inner {
+buttoninput::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -214,6 +219,14 @@ header nav .menu li a:hover:after,
 header nav .menu li a:focus:after,
 header nav .menu li a.current:after {
   width: 100%;
+}
+header nav .menu li.current_page_item a:after {
+  content: "";
+  width: 100%;
+  margin-top: 7px;
+  display: block;
+  height: 3px;
+  background-color: #2ecc71;
 }
 header nav .btn-menu {
   display: inline-block;
@@ -313,8 +326,7 @@ footer .footer-menu a:hover {
 
  HOME 
 
- */
-.current-collection .picture img {
+ */.current-collection .picture img {
   max-width: 260px;
 }
 .current-collection .tshirt-carousel-wrapper {
@@ -870,3 +882,5 @@ li {
     transform: rotate(360deg);
   }
 }
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
