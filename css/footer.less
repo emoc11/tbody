@@ -87,13 +87,16 @@ footer{
 		.bold;
 		text-align: right;
 		line-height: 1.7;
+		font-size: 14px;
 		padding: 12px 22px 12px 0;
 		border-right: solid 4px @green;
-		
+
 		a{
 			color:#fff;
+			-webkit-transition: color .2s ease-out;
+			transition: color .2s ease-out;
 			&:hover{
-				text-decoration: underline;
+				color:@green;
 			}
 		}
 	}
