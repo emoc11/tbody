@@ -361,6 +361,7 @@ footer .footer-menu a:hover {
   margin-top: 64px;
   font-size: 24px;
   font-weight: 900;
+  text-decoration: line-through;
 }
 .current-collection .content .infos-wrapper .price {
   font-size: 36px;
