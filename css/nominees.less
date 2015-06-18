@@ -10,7 +10,7 @@
 
 	.next-collection-infos__rules{
 
-		margin-top: 20px;
+		margin-top: 30px;
 
 		.rules__item{
 			padding: 0 50px;
@@ -43,7 +43,7 @@
 			.rule__name{
 				display: inline-block;
 				vertical-align: middle;
-				font-size: 16px;
+				font-size: 14px;
 			}
 		}
 	}
@@ -75,13 +75,13 @@
 					background-size: 100% auto;
 					background-repeat: no-repeat;
 					cursor: pointer;
-					background-image: url("../images/liked_no.png");
+					// background-image: url("../images/liked_no.png");
 					height: 20px;
 				}
 
 				.nominee__number-votes{
 					position: absolute;
-					z-index: 2;
+					z-index: 4;
 					left: 10px;
 					bottom: 6px;
 					.extra-bold;
@@ -122,13 +122,14 @@
 					left: 0;
 					width: 100%;
 					height: 100%;
-					background-image: url("../images/action_like.png");
+					background-image: url("../images/action_like2.png");
+					background-size: 50%;
 					background-repeat: no-repeat;
 					background-position: center;
-					-webkit-transition: all .5s ease-out;
-					transition: all .5s ease-out;
 					opacity: 0;
-				}	
+					-webkit-transition: opacity .5s ease-out;
+					transition: opacity .5s ease-out;
+				}
 
 				&:hover{
 					.nominee__action{
@@ -143,10 +144,10 @@
 				}
 
 			}
-			
+
 			// T-shirt "liké""
 			&.liked{
-				
+
 				// Bouton petit coeur
 				.nominee__state{
 					background-image: url("../images/liked_yes.png");
@@ -154,9 +155,10 @@
 
 				// Image hover
 				.nominee__action{
-					background-image: url("../images/action_dislike.png");
+					background-color: rgba(46,204,113,.5);
+					background-image: url("../images/action_dislike2.png");
 				}
-				
+
 			}
 
 			.nominee__creator{

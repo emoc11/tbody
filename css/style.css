@@ -1,3 +1,8 @@
+/*
+
+ HOME 
+
+ */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -126,7 +131,7 @@ button[disabled],
 html input[disabled] {
   cursor: default;
 }
-button input::-moz-focus-inner {
+buttoninput::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -297,21 +302,23 @@ footer .footer-menu {
   font-weight: 700;
   text-align: right;
   line-height: 1.7;
+  font-size: 14px;
   padding: 12px 22px 12px 0;
   border-right: solid 4px #2ecc71;
 }
 footer .footer-menu a {
   color: #fff;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
 }
 footer .footer-menu a:hover {
-  text-decoration: underline;
+  color: #2ecc71;
 }
 /*
 
  HOME 
 
- */
-.current-collection .picture img {
+ */.current-collection .picture img {
   max-width: 260px;
 }
 .current-collection .tshirt-carousel-wrapper {
@@ -455,7 +462,7 @@ footer .footer-menu a:hover {
   margin-top: 30px;
 }
 .next-collection-infos .next-collection-infos__rules {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .next-collection-infos .next-collection-infos__rules .rules__item {
   padding: 0 50px;
@@ -484,7 +491,7 @@ footer .footer-menu a:hover {
 .next-collection-infos .next-collection-infos__rules .rules__item .rule__name {
   display: inline-block;
   vertical-align: middle;
-  font-size: 16px;
+  font-size: 14px;
 }
 .nominees {
   margin-top: 60px;
@@ -508,12 +515,11 @@ footer .footer-menu a:hover {
   background-size: 100% auto;
   background-repeat: no-repeat;
   cursor: pointer;
-  background-image: url("../images/liked_no.png");
   height: 20px;
 }
 .nominees .nominees__list .nominee .nominee__main-infos .nominee__number-votes {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   left: 10px;
   bottom: 6px;
   font-weight: 900;
@@ -549,12 +555,13 @@ footer .footer-menu a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/action_like.png");
+  background-image: url("../images/action_like2.png");
+  background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
   opacity: 0;
+  -webkit-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 .nominees .nominees__list .nominee .nominee__main-infos:hover .nominee__action {
   opacity: 1;
@@ -567,7 +574,8 @@ footer .footer-menu a:hover {
   background-image: url("../images/liked_yes.png");
 }
 .nominees .nominees__list .nominee.liked .nominee__action {
-  background-image: url("../images/action_dislike.png");
+  background-color: rgba(46, 204, 113, 0.5);
+  background-image: url("../images/action_dislike2.png");
 }
 .nominees .nominees__list .nominee .nominee__creator {
   text-align: center;
@@ -847,6 +855,7 @@ li {
   background-size: 100% auto;
   background-image: url("../images/loader.png");
   animation: rotation 2s infinite linear;
+  display: none;
 }
 @keyframes rotation {
   0% {
@@ -856,3 +865,5 @@ li {
     transform: rotate(360deg);
   }
 }
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
