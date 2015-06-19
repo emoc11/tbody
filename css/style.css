@@ -257,12 +257,22 @@ header nav .cta-menu {
   display: none;
 }
 .popup_login--container .popup_login--form {
-  width: auto;
-  haight: auto;
+  width: 500px;
+  height: 200px;
   margin: 0 auto;
-  min-height: 300px;
   background-color: #ecf0f1;
+  display: table;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  right: 0;
+}
+.popup_login--container .popup_login--form #loginform {
   display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
 footer {
   background-color: #1e1e1e;
