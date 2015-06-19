@@ -1,3 +1,8 @@
+/*
+
+ HOME
+
+ */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -126,7 +131,7 @@ button[disabled],
 html input[disabled] {
   cursor: default;
 }
-button input::-moz-focus-inner {
+buttoninput::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -199,6 +204,8 @@ header nav .menu li a {
   color: #000;
   font-size: 18px;
   font-weight: 300;
+  display: inline;
+  z-index: 2;
 }
 header nav .menu li a:not([class="empty-button"]):after {
   content: "";
@@ -237,6 +244,34 @@ header nav .btn-menu {
 header nav .cta-menu {
   padding: 12px 8px;
   width: 220px;
+  text-align: center;
+}
+.popup_login--container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: none;
+}
+.popup_login--container .popup_login--form {
+  width: 500px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: #ecf0f1;
+  display: table;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  right: 0;
+}
+.popup_login--container .popup_login--form #loginform {
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
 }
 footer {
@@ -311,6 +346,23 @@ footer .social-links .link .link--label {
   text-align: center;
   width: 100%;
 }
+footer .social-links .link:after {
+  content: "";
+  display: block;
+  opacity: 0;
+  transition: all .2s ease;
+  background-size: 100% auto;
+  width: 22px;
+  height: 14px;
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 11px);
+  background-image: url("../images/icone_triangle.png");
+}
+footer .social-links .link:hover:after {
+  opacity: 1;
+  top: 92px;
+}
 footer .footer-menu {
   color: #fff;
   font-weight: 700;
@@ -330,7 +382,7 @@ footer .footer-menu a:hover {
 }
 /*
 
- HOME 
+ HOME
 
  */
 .current-collection .picture img {
@@ -487,21 +539,42 @@ footer .footer-menu a:hover {
 .next-collection-infos .next-collection-infos__rules .rules__item .rule__icone {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 12px;
+  margin-right: 6px;
   width: 40px;
   height: 40px;
-  background-size: 100% auto;
+  background-size: 50% auto;
   background-repeat: no-repeat;
   background-position: center;
+}
+.next-collection-infos .next-collection-infos__rules .rules__item .rule__icone--couleur {
+  background-image: url("../images/rule_couleur.png");
+}
+.next-collection-infos .next-collection-infos__rules .rules__item .rule__icone--deplacement {
+  background-image: url("../images/rule_flexibility.png");
 }
 .next-collection-infos .next-collection-infos__rules .rules__item .rule__icone--forme {
   background-image: url("../images/rule_forme.png");
 }
-.next-collection-infos .next-collection-infos__rules .rules__item .rule__icone--espace {
-  background-image: url("../images/rule_espace.png");
+.next-collection-infos .next-collection-infos__rules .rules__item .rule__icone--agents {
+  background-image: url("../images/rule_multiple.png");
 }
 .next-collection-infos .next-collection-infos__rules .rules__item .rule__icone--gravite {
   background-image: url("../images/rule_gravite.png");
+}
+.next-collection-infos .next-collection-infos__rules .rules__item .rule__icone--points {
+  background-image: url("../images/rule_points.png");
+}
+.next-collection-infos .next-collection-infos__rules .rules__item .rule__icone--liaison {
+  background-image: url("../images/rule_liaison.png");
+}
+.next-collection-infos .next-collection-infos__rules .rules__item .rule__icone--taille {
+  background-image: url("../images/rule_taille.png");
+}
+.next-collection-infos .next-collection-infos__rules .rules__item .rule__icone--trainee {
+  background-image: url("../images/rule_traine.png");
+}
+.next-collection-infos .next-collection-infos__rules .rules__item .rule__icone--vitesse {
+  background-image: url("../images/rule_vitesse.png");
 }
 .next-collection-infos .next-collection-infos__rules .rules__item .rule__name {
   display: inline-block;
@@ -595,11 +668,16 @@ footer .footer-menu a:hover {
   z-index: 1;
 }
 .nominees .nominees__list .nominee.liked .nominee__state {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   background-image: url("../images/liked_yes.png");
 }
 .nominees .nominees__list .nominee.liked .nominee__action {
   background-color: rgba(46, 204, 113, 0.5);
   background-image: url("../images/action_dislike2.png");
+}
+.nominees .nominees__list .nominee.liked:hover .nominee__state {
+  opacity: 0;
 }
 .nominees .nominees__list .nominee .nominee__creator {
   text-align: center;
@@ -965,3 +1043,5 @@ li {
     transform: rotate(360deg);
   }
 }
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

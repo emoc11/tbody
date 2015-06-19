@@ -21,18 +21,20 @@ header{
 					color: #000;
 					font-size: 18px;
 					.regular;
+					display: inline;
+					z-index: 2;
 
 					&:not([class="empty-button"]):after{
-						  content: "";
-						  opacity: 0;
-						  display: block;
-						  z-index: 1;
-						  width: 100%;
-						  height: 30px;
-						  margin-top: -27px;
-						  background: url("../images/icone_triangle.png") no-repeat center;
-						  -webkit-transition: opacity 0.3s ease-out;
-						  transition: opacity 0.3s ease-out;
+						content: "";
+						opacity: 0;
+						display: block;
+						z-index: 1;
+						width: 100%;
+						height: 30px;
+						margin-top: -27px;
+						background: url("../images/icone_triangle.png") no-repeat center;
+						-webkit-transition: opacity 0.3s ease-out;
+						transition: opacity 0.3s ease-out;
 					}
 
 					&:hover, &:focus, &.current{
@@ -45,7 +47,7 @@ header{
 
 				&.current_page_item {
 					a:after {
-						content: "";
+						content:"";
 						opacity: 1;
 						display: block;
 						z-index: 1;
@@ -75,4 +77,36 @@ header{
 
 	}
 
+}
+
+.popup_login--container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+
+	display:none;
+
+	.popup_login--form {
+		width: 500px;
+		height: 200px;
+		margin: 0 auto;
+		background-color: @grey;
+		display: table;
+		text-align: center;
+		vertical-align: middle;
+		position: absolute;
+		top: 50vh;
+		left: 0;
+		right: 0;
+
+		#loginform {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+	}
 }
