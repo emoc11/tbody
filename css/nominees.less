@@ -20,23 +20,51 @@
 			.rule__icone{
 				display: inline-block;
 				vertical-align: middle;
-				margin-right: 12px;
+				margin-right: 6px;
 				width: 40px;
 				height: 40px;
-				background-size: 100% auto;
+				background-size: 50% auto;
 				background-repeat: no-repeat;
 				background-position: center;
 
-				&--forme{
-					background-image: url("../images/rule_forme.png")
+				&--couleur{
+					background-image: url("../images/rule_couleur.png");
 				}
 
-				&--espace{
-					background-image: url("../images/rule_espace.png")
+				&--deplacement{
+					background-image: url("../images/rule_flexibility.png");
+				}
+
+				&--forme{
+					background-image: url("../images/rule_forme.png");
+				}
+
+				&--agents{
+					background-image: url("../images/rule_multiple.png");
 				}
 
 				&--gravite{
-					background-image: url("../images/rule_gravite.png")
+					background-image: url("../images/rule_gravite.png");
+				}
+
+				&--points{
+					background-image: url("../images/rule_points.png");
+				}
+
+				&--liaison{
+					background-image: url("../images/rule_liaison.png");
+				}
+
+				&--taille{
+					background-image: url("../images/rule_taille.png");
+				}
+
+				&--trainee{
+					background-image: url("../images/rule_traine.png");
+				}
+
+				&--vitesse{
+					background-image: url("../images/rule_vitesse.png");
 				}
 			}
 
@@ -160,6 +188,8 @@
 
 				// Bouton petit coeur
 				.nominee__state{
+					-webkit-transition: all .3s ease-out;
+					transition: all .3s ease-out;
 					background-image: url("../images/liked_yes.png");
 				}
 
@@ -167,6 +197,12 @@
 				.nominee__action{
 					background-color: rgba(46,204,113,.5);
 					background-image: url("../images/action_dislike2.png");
+				}
+
+				&:hover {
+					.nominee__state {
+						opacity:0;
+					}
 				}
 
 			}
