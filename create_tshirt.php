@@ -30,17 +30,31 @@
 			<div class="rules__intro">Changez les différents paramètres ci-dessous pour créer votre propre t-shirt, et appuyez sur "espace" pour l'enregistrer !</div>
 
 			<div class="rules__list">
-				<div class="rules__item">
-					<!-- <div class="rule__name">Points de gravité</div> -->
-					<div class="rule__options">
-						<form action="#">
-							<!-- <div class="rule__option">
-								<label for="rule1-option1">Haut-D</label>
-								<input id="rule1-option1" type="checkbox">
-							</div> -->
-						</form>
+
+				<!-- <form>
+
+					<div class="rules__item">
+						<span class="rule__name">Opacité</span>
+						<input class="rule__tool rule__opacity" type="number">
 					</div>
-				</div>
+					<div class="rules__item">
+						<span class="rule__name">Taille des agents</span>
+						<input class="rule__tool rule__opacity" type="number">
+					</div>
+					<div class="rules__item">
+						<span class="rule__name">Rouge</span>
+						<input class="rule__tool rule__opacity" type="number">
+					</div>
+					<div class="rules__item">
+						<span class="rule__name">Vert</span>
+						<input class="rule__tool rule__opacity" type="number">
+					</div>
+					<div class="rules__item">
+						<span class="rule__name">Bleu</span>
+						<input class="rule__tool rule__opacity" type="number">
+					</div>
+
+				</form> -->
 			</div>
 
 			<div class="rules__save">
