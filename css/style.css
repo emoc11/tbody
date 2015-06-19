@@ -748,8 +748,11 @@ footer .footer-menu a:hover {
 .tshirt-design .tshirt-design__rules .rules__intro {
   text-align: center;
 }
+.tshirt-design .tshirt-design__rules .rules__list {
+  margin-top: 30px;
+}
 .tshirt-design .tshirt-design__rules .rules__save {
-  margin-top: 270px;
+  margin-top: 360px;
   text-align: center;
 }
 .tshirt-design .tshirt-design__rules .rules__save .btn-save {
@@ -867,6 +870,7 @@ footer .footer-menu a:hover {
   left: 0;
   z-index: 11;
   display: none;
+  cursor: pointer;
 }
 .pop-up .pop-up__form {
   z-index: 9;
@@ -877,6 +881,7 @@ footer .footer-menu a:hover {
   margin: 50px auto 0;
   text-align: center;
   position: relative;
+  cursor: initial;
 }
 .pop-up .pop-up__form .pop_up__close {
   position: absolute;
@@ -909,16 +914,47 @@ footer .footer-menu a:hover {
 .dg {
   font: 14px 'Lucida Grande', sans-serif !important;
 }
+.dg.a {
+  float: none;
+}
 .dg.ac {
   position: absolute !important;
-  right: 17% !important;
-  top: 510px !important;
+  right: -28.7% !important;
+  top: 490px !important;
 }
 .dg.ac .dg ul {
   height: auto !important;
 }
 .dg.ac .close-button {
   display: none !important;
+}
+.dg.main.taller-than-window {
+  width: 950px !important;
+}
+.dg .cr.number {
+  border: none !important;
+}
+.dg .slider {
+  margin-top: 0 !important;
+}
+.dg .c .slider-fg,
+.dg .c .slider:hover .slider-fg {
+  background: #2ecc71 !important;
+}
+.dg .c input[type=text],
+.dg .c input[type=text]:hover {
+  background: none !important;
+  margin-top: 0 !important;
+}
+.dg li:not(.folder) {
+  overflow: visible !important;
+  background: none !important;
+}
+.dg .property-name {
+  width: 100% !important;
+  text-shadow: none !important;
+  color: green !important;
+  margin-left: -5px;
 }
 @font-face {
   font-family: 'MuseoSans';
