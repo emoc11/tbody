@@ -102,26 +102,27 @@ header{
 		top: 0;
 		bottom: 0;
 	}
+}
 
 	.popup_login--form {
 		width: 500px;
 		height: 200px;
 		margin: 0 auto;
 		background-color: @grey;
-		display: table;
+		display: none;
 		z-index: 11;
 		text-align: center;
 		vertical-align: middle;
-		position: absolute;
+		position: fixed;
 		top: calc(~"50vh - 100px");
 		left: 0;
 		right: 0;
 		cursor: default;
 
 		#loginform {
-			display: table-cell;
 			vertical-align: middle;
 			text-align: center;
+			margin-top: 30px;
 
 			p {
 				margin-bottom: 20px;
@@ -132,4 +133,8 @@ header{
 			}
 		}
 	}
-}
+
+
+
+
+

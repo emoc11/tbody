@@ -268,30 +268,30 @@ header nav .cta-menu {
   top: 0;
   bottom: 0;
 }
-.popup_login--container .popup_login--form {
+.popup_login--form {
   width: 500px;
   height: 200px;
   margin: 0 auto;
   background-color: #ecf0f1;
-  display: table;
+  display: none;
   z-index: 11;
   text-align: center;
   vertical-align: middle;
-  position: absolute;
+  position: fixed;
   top: calc(50vh - 100px);
   left: 0;
   right: 0;
   cursor: default;
 }
-.popup_login--container .popup_login--form #loginform {
-  display: table-cell;
+.popup_login--form #loginform {
   vertical-align: middle;
   text-align: center;
+  margin-top: 30px;
 }
-.popup_login--container .popup_login--form #loginform p {
+.popup_login--form #loginform p {
   margin-bottom: 20px;
 }
-.popup_login--container .popup_login--form #loginform p:last-child {
+.popup_login--form #loginform p:last-child {
   margin-bottom: 0;
 }
 footer {
