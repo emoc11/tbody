@@ -247,7 +247,7 @@ header nav .cta-menu {
   text-align: center;
 }
 .popup_login--container {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -255,6 +255,7 @@ header nav .cta-menu {
   background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   display: none;
+  z-index: 10;
 }
 .popup_login--container .popup_login--form {
   width: 500px;
@@ -262,12 +263,18 @@ header nav .cta-menu {
   margin: 0 auto;
   background-color: #ecf0f1;
   display: table;
+  z-index: 11;
   text-align: center;
   vertical-align: middle;
   position: absolute;
-  top: 50vh;
+  top: calc(50vh - 100px);
   left: 0;
   right: 0;
+  cursor: default;
+}
+.popup_login--container .popup_login--form:before {
+  position: relative;
+  background: url("../images/");
 }
 .popup_login--container .popup_login--form #loginform {
   display: table-cell;
