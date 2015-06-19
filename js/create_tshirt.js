@@ -15,7 +15,7 @@
         settings.backgroundAlpha = 0.044;
         settings.agentSize = 3;
         settings.maxIncrement = 1;
-        settings.nbAgents = 60
+        settings.nbAgents = 60;
         settings.triangleAlpha = .1;
         settings.distanceActiveMouse = .01;
         settings.mouseActivated = false;
