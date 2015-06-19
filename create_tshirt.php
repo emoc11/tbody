@@ -27,7 +27,7 @@
 
 		<div class="col6 tshirt-design__rules">
 
-			Changer les différents paramètres ci-dessous pour créer votre propre t-shirt !
+			<div class="rules__intro">Changez les différents paramètres ci-dessous pour créer votre propre t-shirt, et appuyez sur "espace" pour l'enregistrer !</div>
 
 			<div class="rules__list">
 				<div class="rules__item">
