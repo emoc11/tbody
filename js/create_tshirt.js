@@ -12,7 +12,7 @@
         var settings ={};
         settings.displayWidth = 260;
         settings.displayHeight = 390;
-        settings.Transparence = Math.floor(Math.random() * 1)-1;
+        settings.Transparence = 0.05;
         settings.Taille = Math.floor(Math.random() * 10)+1;
         settings.maxIncrement = 1;
         settings.Nombres = Math.floor(Math.random() * 500)+1;
