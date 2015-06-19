@@ -2,10 +2,10 @@
 	
 <section>
 
-	<div class="collection-infos">
+	<div class="category-infos">
 
-		<h1 class="collection-infos__name">Collection : <span class="bold">Couleur</span></h1>
-		<div class="collection-infos__description">
+		<h1 class="category-infos__name">Collection : <span class="bold">Couleur</span></h1>
+		<div class="category-infos__description">
 			On appelle Lipsum un texte qui, en l'absence du texte définitif, sert de substitut aux futurs contenus lors de la production de maquettes pour les publications ou sites Web. Le terme Lipsum est issu de la contraction du plus connu de ce type de texte "Lorem ipsum".
 		</div>
 
@@ -26,6 +26,8 @@
 		</div>
 
 		<div class="col6 tshirt-design__rules">
+
+			Changer les différents paramètres ci-dessous pour créer votre propre t-shirt !
 
 			<div class="rules__list">
 				<div class="rules__item">
@@ -52,30 +54,46 @@
 
 </section>
 
-<section class="creations">
+<section class="propositions">
 
 	<div class="onerow">
 
-		<div class="propositions-wrapper col2">
-			<div class="propositions">
+		<div class="propositions-none-wrapper col2">
+			<div class="propositions-none">
 				Vos propositions !
 			</div>
-		</div>
-
-		<div class="creation col2">
-			<a href="#" class="creation__visu">
-				<img src="images/t_shirt_1.png" alt="">
-				<div class="creation__overlay"></div>
-			</a>
-			<a href="#" class="delete">Supprimer</a>
 		</div>
 
 	</div>
 	
 </section>
 
+<div class="pop-up">
+
+	<div class="pop-up__form">
+
+		<div class="pop_up__close"></div>
+	
+		<form action="#">
+				
+				<img class="tshirt__visu" src="" alt="Votre création">
+
+                <input id="tshirt-visu-data" type="hidden" name="tee-picture" />
+
+                <input class="tshirt__name" type="text" name="tee-title" placeholder="Donnez un nom à votre création !"/>
+
+				<input class="btn filled-button tshirt__submit" type="submit" value="Soumettre">
+		</form>
+
+	</div>
+
+	<div class="pop-up__overlay"></div>
+
+</div>
+
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/datgui.js"></script>
+<script src="js/canvas2image.js"></script>
 <script src="js/create_tshirt.js"></script>
 
 <?php include("footer.php"); ?>
