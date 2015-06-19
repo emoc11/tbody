@@ -745,6 +745,9 @@ footer .footer-menu a:hover {
 .tshirt-design .tshirt-design__rules {
   margin-top: 10px !important;
 }
+.tshirt-design .tshirt-design__rules .rules__intro {
+  text-align: center;
+}
 .tshirt-design .tshirt-design__rules .rules__save {
   margin-top: 270px;
   text-align: center;
