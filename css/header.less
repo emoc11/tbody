@@ -107,14 +107,27 @@ header{
 		cursor: default;
 
 		&:before {
-			position: relative;
-			background: url("../images/");
+			content: "";
+			position: absolute;
+			background: url("../images/close_popup.png") no-repeat center;
+			width: 100%;
+			height: 19px;
+			margin-top: -30px;
+			cursor: pointer;
 		}
 
 		#loginform {
 			display: table-cell;
 			vertical-align: middle;
 			text-align: center;
+
+			p {
+				margin-bottom: 20px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 }
