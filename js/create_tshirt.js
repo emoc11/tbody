@@ -10,12 +10,12 @@
 
         // Graphics settings
         var settings ={};
-        settings.displayWidth = 200;
-        settings.displayHeight = 300;
+        settings.displayWidth = 260;
+        settings.displayHeight = 390;
         settings.backgroundAlpha = 0.01;
         settings.agentSize = Math.floor(Math.random() * 10)+1;
         settings.maxIncrement = 1;
-        settings.nbAgents = Math.floor(Math.random() * 500)+1;
+        settings.nbAgents = Math.floor(Math.random() * 100)+10;
         settings.triangleAlpha = .1;
         settings.distanceActiveMouse = .01;
         settings.mouseActivated = false;
@@ -158,7 +158,7 @@
         // gui.add(settings, "triangleAlpha", 0, 1);
         // gui.add(settings, "distanceActiveMouse", 0, 1);
         gui.add(settings, "agentSize", 1, 10);
-        var numAgentController = gui.add(settings, "nbAgents", 1, 500);
+        var numAgentController = gui.add(settings, "nbAgents", 10, 100);
         // gui.add(settings, "mouseActivated", false, true);
         // var stopAnimation = gui.add(settings, "stopAnimation", false, true);
         var colorR = gui.add(settings, "colorR", 0, 256);

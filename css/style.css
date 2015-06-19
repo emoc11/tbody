@@ -704,6 +704,7 @@ footer .footer-menu a:hover {
 .category-infos .category-infos__description {
   margin-top: 40px;
   margin-bottom: 55px;
+  height: 75px;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.8;
@@ -714,7 +715,7 @@ footer .footer-menu a:hover {
   margin-top: 0 !important;
 }
 .tshirt-design .tshirt-design__render {
-  max-width: 440px;
+  max-width: 600px;
   margin: 0 auto;
   position: relative;
 }
@@ -724,11 +725,11 @@ footer .footer-menu a:hover {
 }
 .tshirt-design .tshirt-design__render .tshirt__canvas {
   position: absolute;
-  top: 95px;
-  left: 118px;
+  top: 130px;
+  left: 167px;
 }
 .tshirt-design .tshirt-design__rules {
-  margin-top: 70px !important;
+  margin-top: 100px !important;
 }
 .tshirt-design .tshirt-design__rules .rules__save {
   margin-top: 270px;
@@ -891,7 +892,7 @@ footer .footer-menu a:hover {
 .dg.ac {
   position: absolute !important;
   right: 17% !important;
-  top: 530px !important;
+  top: 600px !important;
 }
 .dg.ac .dg ul {
   height: auto !important;
