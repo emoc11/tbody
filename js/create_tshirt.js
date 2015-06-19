@@ -12,18 +12,18 @@
         var settings ={};
         settings.displayWidth = 260;
         settings.displayHeight = 390;
-        settings.backgroundAlpha = 0.044;
-        settings.agentSize = 3;
+        settings.Transparence = 0.044;
+        settings.Taille = 3;
         settings.maxIncrement = 1;
-        settings.nbAgents = 60;
+        settings.Nombres = 60;
         settings.triangleAlpha = .1;
         settings.distanceActiveMouse = .01;
         settings.mouseActivated = false;
         settings.stopAnimation = false;
 
-        settings.colorR = Math.floor(Math.random() * 256);
-        settings.colorV = Math.floor(Math.random() * 256);
-        settings.colorB = Math.floor(Math.random() * 256);
+        settings.Rouge = Math.floor(Math.random() * 256);
+        settings.Vert = Math.floor(Math.random() * 256);
+        settings.Bleu = Math.floor(Math.random() * 256);
 
         // Mouse position
         var mousePosition = {
@@ -72,8 +72,8 @@
             agent.update = function(distanceToMouseSquared) {
 
                 // Dessiner l'agent
-                ctx.fillStyle = "rgb("+ settings.colorR +", "+ settings.colorV +", "+ settings.colorB +")"; //-- NOIR
-                ctx.fillRect(agent.x, agent.y, settings.agentSize, settings.agentSize); // Taille fixe
+                ctx.fillStyle = "rgb("+ settings.Rouge +", "+ settings.Vert +", "+ settings.Bleu +")"; //-- NOIR
+                ctx.fillRect(agent.x, agent.y, settings.Taille, settings.Taille); // Taille fixe
 
                 // var mouseOnAgent = distanceToMouseSquared / displaySizeSquared;
 
@@ -100,7 +100,7 @@
         // Création de l'agent
         var myAgent = [];
 
-        for (var i = 0; i < settings.nbAgents; i++) {
+        for (var i = 0; i < settings.Nombres; i++) {
 
             if( i % 5 == 0)
                 position.update()
@@ -114,7 +114,7 @@
             // Efface écran
             if(!settings.stopAnimation){
 
-                ctx.fillStyle = "rgba(0, 0, 0, "+settings.backgroundAlpha+")";
+                ctx.fillStyle = "rgba(0, 0, 0, "+settings.Transparence+")";
                 ctx.fillRect(0, 0, settings.displayWidth, settings.displayHeight);
 
 
@@ -154,28 +154,28 @@
         // Init the Graphical User Interace (GUI)
         // We use the dat.gui library, which manages properties of specfific objets of your code
         var gui = new dat.GUI();
-        gui.add(settings, "backgroundAlpha", 0, 1); // Register the property 'refreshAlpha' of the 'settings' object, taking values between 0 and 1. The initial value is the value given to the property at the beginning of this code
+        gui.add(settings, "Transparence", 0, 1); // Register the property 'refreshAlpha' of the 'settings' object, taking values between 0 and 1. The initial value is the value given to the property at the beginning of this code
         // gui.add(settings, "triangleAlpha", 0, 1);
         // gui.add(settings, "distanceActiveMouse", 0, 1);
-        gui.add(settings, "agentSize", 1, 10);
-        var numAgentController = gui.add(settings, "nbAgents", 10, 500);
+        gui.add(settings, "Taille", 1, 10);
+        var numAgentController = gui.add(settings, "Nombres", 10, 500);
         // gui.add(settings, "mouseActivated", false, true);
         // var stopAnimation = gui.add(settings, "stopAnimation", false, true);
-        var colorR = gui.add(settings, "colorR", 0, 256);
-        var colorV = gui.add(settings, "colorV", 0, 256);
-        var colorB = gui.add(settings, "colorB", 0, 256);
+        var Rouge = gui.add(settings, "Rouge", 0, 256);
+        var Vert = gui.add(settings, "Vert", 0, 256);
+        var Bleu = gui.add(settings, "Bleu", 0, 256);
 
 
-        colorR.onChange(function(value){
-            settings.colorR =  Math.floor(value);
+        Rouge.onChange(function(value){
+            settings.Rouge =  Math.floor(value);
         });
 
-        colorV.onChange(function(value){
-            settings.colorV =  Math.floor(value);
+        Vert.onChange(function(value){
+            settings.Vert =  Math.floor(value);
         });
 
-        colorB.onChange(function(value){
-            settings.colorB =  Math.floor(value);
+        Bleu.onChange(function(value){
+            settings.Bleu =  Math.floor(value);
         });
 
         // Listen to the changes of the numAgentController
