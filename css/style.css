@@ -1,8 +1,3 @@
-/*
-
- HOME
-
- */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -131,7 +126,7 @@ button[disabled],
 html input[disabled] {
   cursor: default;
 }
-buttoninput::-moz-focus-inner {
+button input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -889,7 +884,7 @@ footer .footer-menu a:hover {
 .dg.ac {
   position: absolute !important;
   right: 17% !important;
-  top: 590px !important;
+  top: 530px !important;
 }
 .dg.ac .dg ul {
   height: auto !important;
@@ -1043,5 +1038,3 @@ li {
     transform: rotate(360deg);
   }
 }
-
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
