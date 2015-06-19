@@ -228,7 +228,10 @@
         }
 
         $stopAnim.on('click', function() { 
-            if (!settings.stopAnimation){
+
+            var nb_prop = $('.proposition').length;
+
+            if (nb_prop < 6 && !settings.stopAnimation){
                 changeAnimation(); 
                 createProposition();
             }
@@ -241,16 +244,23 @@
 
 
         $("body").keydown(function(event) {
-     
+            
             if (event.which === 32) { 
 
-                if(settings.stopAnimation){
-                    $playAnim.trigger('click');
-                }else{
-                    $stopAnim.trigger('click');
+                if($(".pop-up").is(":hidden")){
+
+                    if(settings.stopAnimation){
+                        $playAnim.trigger('click');
+                    }else{
+                        $stopAnim.trigger('click');
+                    }
+
                 }
 
-               event.preventDefault();
+                if(!($(".tshirt__name").is(":focus"))){
+                    event.preventDefault();
+                }
+
             }
 
         });
