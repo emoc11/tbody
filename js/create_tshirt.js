@@ -249,9 +249,10 @@
                 }else{
                     $stopAnim.trigger('click');
                 }
+
+               event.preventDefault();
             }
 
-            return false;
         });
 
 
