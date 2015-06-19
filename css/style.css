@@ -1,3 +1,8 @@
+/*
+
+ HOME
+
+ */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -126,7 +131,7 @@ button[disabled],
 html input[disabled] {
   cursor: default;
 }
-button input::-moz-focus-inner {
+buttoninput::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -241,6 +246,14 @@ header nav .cta-menu {
   width: 220px;
   text-align: center;
 }
+header nav .user_menu_co {
+  width: 50px;
+  height: 50px;
+  background: url("../images/header_rouage.png") no-repeat center;
+  background-size: 75%;
+  display: inline-block;
+  vertical-align: middle;
+}
 .popup_login--container {
   position: fixed;
   top: 0;
@@ -265,7 +278,7 @@ header nav .cta-menu {
 }
 .popup_login--form {
   width: 500px;
-  height: 200px;
+  min-height: 200px;
   margin: 0 auto;
   background-color: #ecf0f1;
   display: none;
@@ -286,8 +299,14 @@ header nav .cta-menu {
 .popup_login--form #loginform p {
   margin-bottom: 20px;
 }
-.popup_login--form #loginform p:last-child {
-  margin-bottom: 0;
+.popup_login--form #loginform input[type="submit"] {
+  background-color: transparent;
+  cursor: pointer;
+  border: solid 3px #2ecc71;
+  padding: 10px 16px 8px;
+  color: #2ecc71;
+  font-weight: 700;
+  display: inline-block;
 }
 footer {
   background-color: #1e1e1e;
@@ -1102,3 +1121,5 @@ li {
     transform: rotate(360deg);
   }
 }
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
