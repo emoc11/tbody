@@ -631,6 +631,7 @@ footer .footer-menu a:hover {
 .tshirt-design {
   display: inline-block;
   width: 100%;
+  margin-top: 0 !important;
 }
 .tshirt-design .tshirt-design__render {
   max-width: 440px;
@@ -647,7 +648,7 @@ footer .footer-menu a:hover {
   left: 118px;
 }
 .tshirt-design .tshirt-design__rules {
-  margin-top: 100px !important;
+  margin-top: 70px !important;
 }
 .tshirt-design .tshirt-design__rules .rules__save {
   margin-top: 270px;
@@ -810,7 +811,7 @@ footer .footer-menu a:hover {
 .dg.ac {
   position: absolute !important;
   right: 17% !important;
-  top: 650px !important;
+  top: 590px !important;
 }
 .dg.ac .dg ul {
   height: auto !important;
