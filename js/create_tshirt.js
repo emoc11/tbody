@@ -13,9 +13,9 @@
         settings.displayWidth = 200;
         settings.displayHeight = 300;
         settings.backgroundAlpha = 0.01;
-        settings.agentSize = Math.round(Math.random() * 10);
+        settings.agentSize = Math.floor(Math.random() * 10)+1;
         settings.maxIncrement = 1;
-        settings.nbAgents = Math.round(Math.random() * 500);
+        settings.nbAgents = Math.floor(Math.random() * 500)+1;
         settings.triangleAlpha = .1;
         settings.distanceActiveMouse = .01;
         settings.mouseActivated = false;
