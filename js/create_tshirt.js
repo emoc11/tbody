@@ -12,10 +12,10 @@
         var settings ={};
         settings.displayWidth = 260;
         settings.displayHeight = 390;
-        settings.backgroundAlpha = 0.01;
-        settings.agentSize = Math.floor(Math.random() * 10)+1;
+        settings.backgroundAlpha = 0.044;
+        settings.agentSize = 3;
         settings.maxIncrement = 1;
-        settings.nbAgents = Math.floor(Math.random() * 100)+10;
+        settings.nbAgents = 60;
         settings.triangleAlpha = .1;
         settings.distanceActiveMouse = .01;
         settings.mouseActivated = false;
