@@ -12,10 +12,10 @@
         var settings ={};
         settings.displayWidth = 260;
         settings.displayHeight = 390;
-        settings.Transparence = 0.044;
-        settings.Taille = 3;
+        settings.Transparence = Math.floor(Math.random() * 1)-1;
+        settings.Taille = Math.floor(Math.random() * 10)+1;
         settings.maxIncrement = 1;
-        settings.Nombres = 60;
+        settings.Nombres = Math.floor(Math.random() * 500)+1;
         settings.triangleAlpha = .1;
         settings.distanceActiveMouse = .01;
         settings.mouseActivated = false;
@@ -155,8 +155,6 @@
         // We use the dat.gui library, which manages properties of specfific objets of your code
         var gui = new dat.GUI();
         gui.add(settings, "Transparence", 0, 1); // Register the property 'refreshAlpha' of the 'settings' object, taking values between 0 and 1. The initial value is the value given to the property at the beginning of this code
-        // gui.add(settings, "triangleAlpha", 0, 1);
-        // gui.add(settings, "distanceActiveMouse", 0, 1);
         gui.add(settings, "Taille", 1, 10);
         var numAgentController = gui.add(settings, "Nombres", 10, 500);
         // gui.add(settings, "mouseActivated", false, true);
