@@ -357,18 +357,20 @@ footer .social-links .link:nth-child(2) {
   margin: 0 68px;
 }
 footer .social-links .link .link--icone {
-  height: 40px;
-  background-size: 100% auto;
+  background-size: 50% auto;
   margin: 0 auto;
 }
 footer .social-links .link .link--icone.icone-fb {
   width: 24px;
+  height: 40px;
 }
 footer .social-links .link .link--icone.icone-tw {
   width: 45px;
+  height: 35px;
 }
 footer .social-links .link .link--icone.icone-insta {
   width: 36px;
+  height: 35px;
 }
 footer .social-links .link .link--label {
   position: absolute;
@@ -939,7 +941,25 @@ footer .footer-menu a:hover {
 .dg.ac .close-button {
   display: none !important;
 }
-@font-face {
+/*
+
+.dg .cr.number {
+  border: none !important;
+}
+
+.dg .c .slider-fg, .dg .c .slider:hover .slider-fg{
+	background: @green !important;
+}
+
+.dg li:not(.folder){
+	overflow: visible !important;
+}
+
+.dg .property-name{
+	width: 100% !important;
+}
+
+*/@font-face {
   font-family: 'MuseoSans';
   src: url('../fonts/MuseoSans-300.eot');
   src: url('../fonts/MuseoSans-300.eot?#iefix') format('embedded-opentype'), url('../fonts/MuseoSans-300.woff2') format('woff2'), url('../fonts/MuseoSans-300.woff') format('woff'), url('../fonts/MuseoSans-300.ttf') format('truetype'), url('../fonts/MuseoSans-300.svg#MuseoSans-300') format('svg');
@@ -1042,31 +1062,31 @@ li {
 .icone-fb,
 .icone-tw,
 .icone-insta {
+  background-image: url("../images/icone_rs-sprite.png");
   background-repeat: no-repeat;
-  background-position: top center;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 .icone-fb {
-  background-image: url("../images/icone_fb.png");
+  background-position: 0 -40px;
 }
 .icone-fb:hover,
 .link--fb:hover .icone-fb {
-  background-image: url("../images/icone_fb-hover.png");
+  background-position: 0px -80px;
 }
 .icone-tw {
-  background-image: url("../images/icone_tw.png");
+  background-position: 0 -170px;
 }
 .icone-tw:hover,
 .link--tw:hover .icone-tw {
-  background-image: url("../images/icone_tw-hover.png");
+  background-position: -90px -170px;
 }
 .icone-insta {
-  background-image: url("../images/icone_insta.png");
+  background-position: 0px -90px;
 }
 .icone-insta:hover,
 .link--insta:hover .icone-insta {
-  background-image: url("../images/icone_insta-hover.png");
+  background-position: -79px -90px;
 }
 .loader {
   width: 40px;
@@ -1084,6 +1104,10 @@ li {
   100% {
     transform: rotate(360deg);
   }
+}
+textarea:focus,
+input:focus {
+  outline: 0;
 }
 
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
