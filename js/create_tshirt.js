@@ -265,6 +265,17 @@
 
         });
 
+        // $(".pop-up").on("click", function(e){
+
+        //     console.log($(e.target));
+
+        //     var target = $(e.target);
+
+        //     if((target != $(".pop-up__form")){
+        //         $(".pop_up").fadeOut();
+        //     }
+        // });
+
 
         // Créer/supprimer/sauver(sélectionner) la proposition;
 
