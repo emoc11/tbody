@@ -743,7 +743,7 @@ footer .footer-menu a:hover {
   width: 200px;
 }
 .tshirt-design .tshirt-design__rules {
-  margin-top: 100px !important;
+  margin-top: 10px !important;
 }
 .tshirt-design .tshirt-design__rules .rules__save {
   margin-top: 270px;
@@ -903,10 +903,13 @@ footer .footer-menu a:hover {
   position: fixed;
   z-index: 8;
 }
+.dg {
+  font: 14px 'Lucida Grande', sans-serif !important;
+}
 .dg.ac {
   position: absolute !important;
   right: 17% !important;
-  top: 600px !important;
+  top: 490px !important;
 }
 .dg.ac .dg ul {
   height: auto !important;

@@ -158,7 +158,7 @@
         // gui.add(settings, "triangleAlpha", 0, 1);
         // gui.add(settings, "distanceActiveMouse", 0, 1);
         gui.add(settings, "agentSize", 1, 10);
-        var numAgentController = gui.add(settings, "nbAgents", 10, 100);
+        var numAgentController = gui.add(settings, "nbAgents", 10, 500);
         // gui.add(settings, "mouseActivated", false, true);
         // var stopAnimation = gui.add(settings, "stopAnimation", false, true);
         var colorR = gui.add(settings, "colorR", 0, 256);
@@ -244,9 +244,14 @@
      
             if (event.which === 32) { 
 
-                $stopAnim.trigger('click');
-
+                if(settings.stopAnimation){
+                    $playAnim.trigger('click');
+                }else{
+                    $stopAnim.trigger('click');
+                }
             }
+
+            return false;
         });
 
 
